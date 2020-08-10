@@ -1,7 +1,6 @@
 ---
 title: "Swagger UI"
 excerpt: "이 세상엔 알아야 할 게 엄청 많다!"
-comments: true
 
 categories:
   - API
