@@ -21,15 +21,15 @@ layout : 출력 형식(pattern) 설정
 <br>
 활용   
 logger를 적용하고자 하는 곳(ex. ddd.class)에 객체 생성   
-```java
+```
 Logger logger = Logger.getLogger("ddd.class");
 ```
-```java
+```
 Logger logger = Logger.getLogger("ddd.class");
 ```
 log를 출력할 때, +연산자를 쓰기 보다 { } 연산자를 사용하는 게 성능적으로 더 좋다.    
-+연산자는 선언한 개수만큼 문자열 연산이 일어나기 때문이다.
-```java
++연산자는 선언한 개수만큼 문자열 연산이 일어나기 때문이다.   
+```
 logger.debug("Hello {}.", userNm);
 ```
 <br>
