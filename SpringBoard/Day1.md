@@ -166,9 +166,26 @@ select * from comments;
 <br>
 
 ##### IntelliJ로 스프링/메이븐 프로젝트 구성
-많은 일들이 있는데...     
-내일 써야 겠다.    
+설정     
+스프링 프로젝트를 생성함에 있어 제일 중요한 파일은 web.xml과 pom.xml이다.    
+web.xml은 요청이 들어왔을 때 가장 먼저 마주하게 되는 파일로 Dispatcher Servlet과 들어온 정보를 걸러내는 filter에 대한 설정을 한다.   
+pom.xml은 프로젝트에서 쓰이는 모든 기술과 버전을 작성한다. 최신 버전이나 호환성을 체크하고 설정하는 게 중요하다.    
 
+그 외 application-context.xml, board-servlet.xml, mybatis-config.xml, database.properties 설정을 한다.
 
+<br>
 
+클래스 및 구현 페이지들    
+게시판을 만들기 위해서는 데이터가 어떤 방향으로 흘러가는지 알아야 한다.      
+1 mapper xml 파일에 MariaDB를 통해 생성한 테이블을 호출하는 쿼리문을 작성한다.      
+2 mapper.java 파일에 데이터를 불러오기 위한 인터페이스를 설정한다.     
+3 Dto.java 파일에서 자바 객체로 가져오기 위해 필드 선언, 생성자 호출, getter/setter 메서드와 toString을 생성한다.    
+4 service.java 파일로 dto에 정의된 데이터를 가져온다.
+5 controller.java 파일에서 요청했던 데이터가 들어오면 모델 객체를 생성해 데이터를 담아 지정한 jsp 페이지로 보낸다.
+6 jsp 페이지에 화면과 필요한 정보를 보여준다.
 
+<br>
+
+##### 오늘 느낀 점
+스프링과 프로젝트 구성에 대한 기본 지식이 없어 많이 헤맨 것 같다.     
+공부하면서 원리를 파악하는데 집중해보자.
